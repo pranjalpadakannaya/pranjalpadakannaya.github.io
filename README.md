@@ -23,6 +23,6 @@ Visit my live site here: [https://pranjalpadakannaya.github.io](https://pranjalp
 index.html -> main entry point
 
 ## 📬 Contact
-- **LinkedIn**: [Pranjal Padakannaya](https://github.com/pranjalpadakannaya)
+- **LinkedIn**: [Pranjal Padakannaya](https://www.linkedin.com/in/pranjal-padakannaya/)
 - **GitHub**: [pranjalpadakannaya](https://github.com/pranjalpadakannaya)
 - **Email**: pranjalpadak@gmail.com

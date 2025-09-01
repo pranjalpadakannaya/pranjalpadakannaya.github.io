@@ -12,7 +12,7 @@ Built with **HTML, CSS, and JavaScript** and hosted on **GitHub Pages**.
 - Resume download option
 - Contact links (GitHub, LinkedIn, Email)
 
-- ## 🚀 Deployment
+## 🚀 Deployment
 Deployed using **GitHub Pages**.  
 Visit my live site here: [https://pranjalpadakannaya.github.io](https://pranjalpadakannaya.github.io)
 

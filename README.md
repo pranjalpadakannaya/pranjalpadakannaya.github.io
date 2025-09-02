@@ -17,9 +17,8 @@ Deployed using **GitHub Pages**.
 Visit my live site here: [https://pranjalpadakannaya.github.io](https://pranjalpadakannaya.github.io)
 
 ## 📂 Structure
-- /assets -> images, icons, and styles
-- /css -> stylesheet files
-- /js -> JavaScript files
+- /assets -> css, js and stylefonts
+- /images -> image artifacts
 - index.html -> main entry point
 
 ## 📬 Contact

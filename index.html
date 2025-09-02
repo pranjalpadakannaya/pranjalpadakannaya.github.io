@@ -1,459 +1,322 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Portfolio - Pranjal Padakannaya</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Pranjal Padakannaya — Data Engineer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Data Engineer with 2 years' experience building scalable pipelines for Fortune 500 clients. AWS, Databricks, Spark, Snowflake." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="images/avatar.jpg" />
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>Pranjal Padakannaya</strong>
-					Data Engineer and ETL Developer<br />
-				</div>
-			</header>
+    <!-- JSON-LD: Person schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pranjal Padakannaya",
+      "jobTitle": "Data Engineer",
+      "url": "https://pranjalpadakannaya.github.io/",
+      "email": "mailto:pranjalpadak@gmail.com",
+      "telephone": "+1-480-277-6530",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tempe",
+        "addressRegion": "AZ",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/pranjal-padakannaya/",
+        "https://github.com/pranjalpadakannaya"
+      ],
+      "alumniOf": [
+        {"@type":"CollegeOrUniversity","name":"Arizona State University"},
+        {"@type":"CollegeOrUniversity","name":"Dayananda Sagar University"}
+      ],
+      "knowsAbout": [
+        "Data Engineering","ETL","AWS","Databricks","Apache Spark","Snowflake","SQL","Python"
+      ]
+    }
+    </script>
 
-		<!-- Main -->
-			<div id="main">
+    <!-- Minimal dark-mode overrides (non-destructive to theme) -->
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #1f2937;
+        --card: rgba(0,0,0,0.035);
+        --link: #2563eb;
+      }
+      .theme-dark {
+        --bg: #0b0f14;
+        --fg: #e5e7eb;
+        --card: rgba(255,255,255,0.06);
+        --link: #93c5fd;
+      }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+      }
+      a { color: var(--link); }
+      /* soften boxes/images in dark */
+      .box, .work-item, .labeled-icons li, .table-wrapper, .inner {
+        background: transparent;
+      }
+      .work-item, .box.alt, .labeled-icons li {
+        border-radius: 8px;
+        box-shadow: 0 1px 0 var(--card);
+      }
+      /* header button */
+      .theme-toggle {
+        display: inline-flex; align-items:center; gap:.5rem;
+        font-size:.9rem; padding:.35rem .7rem; border-radius:999px;
+        border:1px solid var(--card); background:transparent; color:var(--fg);
+        cursor:pointer; transition:opacity .2s;
+      }
+      .theme-toggle:hover { opacity:.85; }
+    </style>
+  </head>
+  <body class="is-preload" id="top">
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Work in Progress</h2>
-						</header>
-						<p>Work in Progress</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</section>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="#top" class="image avatar"><img src="images/avatar.jpg" alt="Photo of Pranjal Padakannaya" /></a>
+        <h1>
+          <strong>Pranjal Padakannaya</strong><br />
+          Data Engineer • ETL Developer
+        </h1>
+        <p class="minor">
+          Tempe, AZ • <a href="tel:+14802776530">(+1) 480-277-6530</a> •
+          <a href="mailto:pranjalpadak@gmail.com">pranjalpadak@gmail.com</a>
+        </p>
+        <p class="minor">
+          <a href="https://www.linkedin.com/in/pranjal-padakannaya/" target="_blank" rel="noopener">LinkedIn</a> •
+          <a href="https://pranjalpadakannaya.github.io/" target="_blank" rel="noopener">Website</a> •
+          <a href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
+        </p>
+        <p>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓 Toggle Dark Mode</button>
+        </p>
+      </div>
+    </header>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
+    <!-- Main -->
+    <div id="main">
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Work in Progress</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1019 E University Drive<br />
-										Tempe, AZ 85281<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										480-277-6530
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">pranjalpadak@gmail.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+      <!-- About -->
+      <section id="one">
+        <header class="major">
+          <h2>About</h2>
+        </header>
+        <p>
+          Data Engineer with 2 years of experience designing and operating scalable data pipelines for Fortune 500 clients.
+          Skilled in Python, SQL, AWS, Databricks, Apache Spark, and Snowflake. Published researcher with funded projects;
+          focused on building reliable, high-impact data solutions.
+        </p>
+        <ul class="actions">
+          <li><a href="#three" class="button">Contact</a></li>
+        </ul>
+      </section>
 
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+      <!-- Highlights -->
+      <section id="two">
+        <h2>Key Highlights</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a class="image fit thumb"><img src="images/thumbs/01.jpg" alt="Dashboards" /></a>
+            <h3>KPI Dashboards &amp; Pipelines (Merck)</h3>
+            <p>Designed and deployed ETL on AWS + Databricks; achieved <strong>40% reduction</strong> in data processing time and improved cross-market insights.</p>
+          </article>
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+          <article class="col-6 col-12-xsmall work-item">
+            <a class="image fit thumb"><img src="images/thumbs/02.jpg" alt="Hierarchy" /></a>
+            <h3>Account Hierarchy — First in Europe</h3>
+            <p>Built a recursive query solution for customer account hierarchy, enabling future projects in sales and Veeva activity distribution.</p>
+          </article>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+          <article class="col-6 col-12-xsmall work-item">
+            <a class="image fit thumb"><img src="images/thumbs/03.jpg" alt="C-level insights" /></a>
+            <h3>Executive Insights</h3>
+            <p>Integrated insights into C-level dashboards across European markets, directly unlocking <strong>$200M</strong> in business value.</p>
+          </article>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
+          <article class="col-6 col-12-xsmall work-item">
+            <a class="image fit thumb"><img src="images/thumbs/04.jpg" alt="AI enablement" /></a>
+            <h3>AI Enablement</h3>
+            <p>Led and trained 40+ prompt engineers over a summer engagement, improving AI model performance for a leading AI research organization.</p>
+          </article>
+        </div>
+      </section>
 
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Experience</h2>
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+        <h3>Data Engineer — The Math Company (MathCo)</h3>
+        <p class="minor">Jan 2024 – Jun 2025 · Bangalore, India (remote collaboration with EU/US)</p>
+        <ul>
+          <li>Built commercial data solutions for Merck with multi-market KPI dashboards; <strong>40% faster</strong> processing</li>
+          <li>Implemented recursive account hierarchy (first in Europe) to scale sales &amp; Veeva activity distribution</li>
+          <li>Coordinated migrations with regional heads across markets; improved transparency, unlocking <strong>$200M</strong> value</li>
+        </ul>
 
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
+        <h3>Lead AI Prompt Engineer — Apex CoVantage</h3>
+        <p class="minor">Jun 2025 – Aug 2025 · Remote</p>
+        <ul>
+          <li>Led/trained <strong>40+</strong> prompt engineers; 100% on-time delivery over 3 months</li>
+          <li>Revamped 8,000+ rubric items, boosting model performance for a leading AI research org</li>
+        </ul>
 
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
+        <h3>Springboard Intern — Infosys</h3>
+        <p class="minor">Feb 2022 – May 2022 · Bangalore, India</p>
+        <ul>
+          <li>Optimized page load via template redirection; improved web app efficiency</li>
+          <li>Authored Python/SQL scripts to clean and standardize messy data</li>
+        </ul>
+      </section>
 
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="row">
+          <div class="col-6 col-12-xsmall">
+            <h4>Programming &amp; Querying</h4>
+            <p>Python, SQL</p>
+            <h4>Big Data &amp; Cloud</h4>
+            <p>Apache Spark, Databricks, AWS, Snowflake</p>
+            <h4>ETL &amp; Orchestration</h4>
+            <p>Airflow, Matillion</p>
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <h4>DevOps &amp; CI/CD</h4>
+            <p>Docker, Terraform, Jenkins, GitHub Actions, Git</p>
+            <h4>Governance &amp; Integration</h4>
+            <p>Collibra, REST APIs</p>
+            <h4>Certifications</h4>
+            <p>Databricks Certified Data Analyst Associate (2025–2027)</p>
+          </div>
+        </div>
+      </section>
 
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
+      <!-- Education & Awards -->
+      <section id="edu">
+        <h2>Education &amp; Awards</h2>
+        <h3>Arizona State University</h3>
+        <p class="minor">M.S. in Computer Science (Big Data Systems) — Expected May 2027 · Tempe, AZ</p>
 
-					</section>
-				-->
+        <h3>Dayananda Sagar University</h3>
+        <p class="minor">B.S. in Computer Science — GPA: 3.53</p>
 
-			</div>
+        <h4>Awards</h4>
+        <ul class="alt">
+          <li>Impact Performer — MSD (Merck) · Jun 2025</li>
+          <li>Appreciation Award — MathCo · Oct 2024</li>
+        </ul>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+        <h4>Publication</h4>
+        <p>
+          Building Accessible Video Games for Children with an Autism Spectrum Disorder —
+          <a href="https://ieeexplore.ieee.org/document/10179616" target="_blank" rel="noopener">IEEE Xplore</a>
+        </p>
+      </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- Contact -->
+      <section id="three">
+        <h2>Get In Touch</h2>
+        <p>If you’d like to discuss data engineering roles, projects, or collaborations, feel free to reach out.</p>
+        <div class="row">
+          <div class="col-8 col-12-small">
+            <form onsubmit="window.location='mailto:pranjalpadak@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Pranjal,'; return false;">
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall"><input type="text" placeholder="Your Name" /></div>
+                <div class="col-6 col-12-xsmall"><input type="email" placeholder="Your Email" /></div>
+                <div class="col-12"><textarea placeholder="Message" rows="4"></textarea></div>
+              </div>
+              <ul class="actions">
+                <li><input type="submit" value="Send Email" /></li>
+              </ul>
+            </form>
+          </div>
+          <div class="col-4 col-12-small">
+            <ul class="labeled-icons">
+              <li>
+                <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+                Tempe, AZ 85281<br />United States
+              </li>
+              <li>
+                <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                <a href="tel:+14802776530">(+1) 480-277-6530</a>
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                <a href="mailto:pranjalpadak@gmail.com">pranjalpadak@gmail.com</a>
+              </li>
+              <li>
+                <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+                <a href="https://www.linkedin.com/in/pranjal-padakannaya/" target="_blank" rel="noopener">linkedin.com/in/pranjal-padakannaya</a>
+              </li>
+              <li>
+                <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
+                <a href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">github.com/pranjalpadakannaya</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-	</body>
+    </div>
 
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://github.com/pranjalpadakannaya" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/pranjal-padakannaya/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:pranjalpadak@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; <span id="yr"></span> Pranjal Padakannaya</li><li>Design: <a href="http://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Persisted dark mode toggle with system preference fallback
+      (function () {
+        const body = document.body;
+        const btn = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'dark') body.classList.add('theme-dark');
+          else body.classList.remove('theme-dark');
+          localStorage.setItem('theme', mode);
+          btn.textContent = mode === 'dark' ? '🌞 Light Mode' : '🌓 Dark Mode';
+        };
+
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+          apply(saved);
+        } else {
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          apply(prefersDark ? 'dark' : 'light');
+        }
+
+        btn.addEventListener('click', () => {
+          const now = body.classList.contains('theme-dark') ? 'dark' : 'light';
+          apply(now === 'dark' ? 'light' : 'dark');
+        });
+      })();
+
+      // auto-year in footer
+      document.getElementById('yr').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
-

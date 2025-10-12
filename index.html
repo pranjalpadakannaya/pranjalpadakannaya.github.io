@@ -55,13 +55,23 @@
       .project-card { padding:1rem; border-radius:10px; box-shadow:0 1px 0 var(--card); }
       .project-meta { font-size:.9rem; opacity:.9; margin:.2rem 0 .6rem; }
       .project-links a { margin-right:.75rem; }
+      .image.avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem auto;
+        position: relative;
+        left: 0 !important; /* override HTML5UP's offset */
+        transform: none !important;
+      }
+      
       .image.avatar img {
         width: 180px;
         height: 180px;
         border-radius: 50%;
         object-fit: cover;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        border: 2px solid var(--card);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border: 2px solid rgba(255,255,255,0.2);
       }
 
     </style>
@@ -320,4 +330,5 @@
     </script>
   </body>
 </html>
+
 

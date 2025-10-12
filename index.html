@@ -55,6 +55,15 @@
       .project-card { padding:1rem; border-radius:10px; box-shadow:0 1px 0 var(--card); }
       .project-meta { font-size:.9rem; opacity:.9; margin:.2rem 0 .6rem; }
       .project-links a { margin-right:.75rem; }
+      .image.avatar img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: 2px solid var(--card);
+      }
+
     </style>
   </head>
   <body class="is-preload" id="top">
@@ -105,13 +114,13 @@
         <h2>Key Highlights</h2>
         <div class="row">
           <article class="col-6 col-12-xsmall work-item">
-            <a class="image fit thumb"><img src="images/thumbs/02.jpg" alt="Hierarchy" /></a>
+            <a class="image fit thumb"><img src="images/accounthierarchy.jpg" alt="Hierarchy" /></a>
             <h3>Account Hierarchy — First in Europe</h3>
             <p>Led Europe’s first implementation of customer account hierarchy for Merck, enabling account potential initiatives.</p>
           </article>
 
           <article class="col-6 col-12-xsmall work-item">
-            <a class="image fit thumb"><img src="images/thumbs/03.jpg" alt="C-level insights" /></a>
+            <a class="image fit thumb"><img src="images/insights.jpg" alt="C-level insights" /></a>
             <h3>Executive Insights Impact</h3>
             <p>Drove <strong>$200M</strong> in value by integrating insights into C-level dashboards across European markets.</p>
           </article>
@@ -125,9 +134,9 @@
           <!-- Project 1 -->
           <div class="col-6 col-12-small">
             <div class="project-card">
-              <h3>Retail KPI Lakehouse</h3>
-              <p class="project-meta">Spark • Databricks • Delta Lake • AWS (S3, Glue) • dbt</p>
-              <p>End-to-end ELT for retail KPIs with incremental loads, SCD handling, and gold-layer marts powering exec dashboards.</p>
+              <h3>End to End Supply Chain Processing using Cockroach DB (In-Progress)</h3>
+              <p class="project-meta">CockroachDB • AWS • Kakfa • dbt</p>
+              <!-- <p></p> -->
               <p class="project-links">
                 <a class="button small" href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
                 <a class="button small" href="#" target="_blank" rel="noopener">Live Demo</a>
@@ -137,9 +146,9 @@
           <!-- Project 2 -->
           <div class="col-6 col-12-small">
             <div class="project-card">
-              <h3>Real-Time Engagement Pipeline</h3>
-              <p class="project-meta">Kafka (or Kinesis) • Spark Structured Streaming • Snowflake</p>
-              <p>Streaming pipeline that enriches clickstream events and lands query-ready tables in Snowflake for near-real-time analytics.</p>
+              <h3>Secret Project Coming Soon</h3>
+              <p class="project-meta">Kafka • Spark Structured Streaming • Databricks</p>
+              <!-- <p></p> -->
               <p class="project-links">
                 <a class="button small" href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
                 <a class="button small" href="#" target="_blank" rel="noopener">Tech Notes</a>
@@ -311,3 +320,4 @@
     </script>
   </body>
 </html>
+

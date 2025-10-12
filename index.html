@@ -55,40 +55,32 @@
       .project-card { padding:1rem; border-radius:10px; box-shadow:0 1px 0 var(--card); }
       .project-meta { font-size:.9rem; opacity:.9; margin:.2rem 0 .6rem; }
       .project-links a { margin-right:.75rem; }
-      #header .inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      #header .inner{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
       }
       
-      /* Avatar perfectly centered */
-      .image.avatar {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: -40px 0 1.5rem 0;
+      /* Avatar: truly centered above the name */
+      .image.avatar{
+        position: static !important;     /* kill template offsets */
+        transform: none !important;
+        left: auto !important;
+        display: block;
+        margin: -32px auto 1.5rem auto;  /* slight overlap; tweak -32px if needed */
         z-index: 2;
       }
       
-      /* Avatar image styling */
-      .image.avatar img {
+      .image.avatar img{
         width: 185px;
         height: 185px;
+        display:block;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid rgba(255,255,255,0.25);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25),
-                    0 0 12px rgba(255, 255, 255, 0.1);
-        background-color: #fff;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .image.avatar img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.35),
-                    0 0 15px rgba(255,255,255,0.2);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.1);
       }
 
     </style>
@@ -347,6 +339,7 @@
     </script>
   </body>
 </html>
+
 
 
 

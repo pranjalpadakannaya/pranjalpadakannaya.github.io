@@ -63,24 +63,30 @@
         text-align:center;
       }
       
-      /* Avatar: truly centered above the name */
-      .image.avatar{
-        position: static !important;     /* kill template offsets */
-        transform: none !important;
+      /* Avatar container: a perfect, centered circle */
+      #header .inner a.image.avatar{
+        position: static !important;   /* kill template offsets */
         left: auto !important;
-        display: block;
-        margin: 16px auto 1.5rem auto;  /* slight overlap; tweak -32px if needed */
-        z-index: 2;
-      }
+        transform: none !important;
+        float: none !important;
       
-      .image.avatar img{
-        width: 185px;
-        height: 185px;
-        display:block;
+        display: block;
+        width: 190px;                  /* circle size */
+        height: 190px;
+        margin: 0 auto 1.25rem !important;
         border-radius: 50%;
-        object-fit: cover;
+        overflow: hidden;              /* crop inside the circle */
         border: 3px solid rgba(255,255,255,0.25);
         box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.1);
+      }
+      
+      /* Photo fills the circle without stretching */
+      #header .inner a.image.avatar img{
+        display:block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 0;
       }
 
     </style>
@@ -154,7 +160,7 @@
           <div class="col-6 col-12-small">
             <div class="project-card">
               <h3>End to End Supply Chain Processing using Cockroach DB (In-Progress)</h3>
-              <p class="project-meta">CockroachDB • AWS • Kakfa • dbt</p>
+              <p class="project-meta">CockroachDB • AWS • Kafka • dbt</p>
               <!-- <p></p> -->
               <p class="project-links">
                 <a class="button small" href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
@@ -339,6 +345,7 @@
     </script>
   </body>
 </html>
+
 
 
 

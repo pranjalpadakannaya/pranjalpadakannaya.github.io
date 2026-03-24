@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pranjalpadakannaya.github.io/sitemap.xml

@@ -5,22 +5,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#080c14',
-        surface: '#0f1622',
-        accent: '#00ffcc',
-        purple: '#7c3aed',
+        bg: '#FAFAF8',
+        surface: '#F5F4F0',
+        border: '#E6E4DF',
+        accent: '#CC5500',
+        'accent-soft': '#FFF0E8',
+        'text-primary': '#1A1917',
+        'text-secondary': '#6B6B6B',
       },
       fontFamily: {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
-        glow: '0 0 20px rgba(0,255,204,0.3)',
-        'glow-lg': '0 0 40px rgba(0,255,204,0.4)',
-        'glow-purple': '0 0 20px rgba(124,58,237,0.4)',
-      },
-      animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'spin-slow': 'spin 8s linear infinite',
+        card: '0 1px 4px rgba(0,0,0,0.06)',
+        'card-hover': '0 4px 12px rgba(0,0,0,0.08)',
       },
     },
   },

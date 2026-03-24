@@ -8,15 +8,15 @@
   }
 
   body {
-    background-color: #080c14;
-    color: #e2e8f0;
+    background-color: #FAFAF8;
+    color: #1A1917;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: rgba(0, 255, 204, 0.2);
-    color: #00ffcc;
+    background: rgba(204, 85, 0, 0.15);
+    color: #CC5500;
   }
 
   ::-webkit-scrollbar {
@@ -24,40 +24,34 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #080c14;
+    background: #F5F4F0;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 204, 0.25);
+    background: rgba(204, 85, 0, 0.2);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 255, 204, 0.5);
+    background: rgba(204, 85, 0, 0.4);
   }
 }
 
 @layer utilities {
-  .glow-text {
-    text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-  }
-
   .grid-bg {
     background-image:
-      linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(26, 25, 23, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 25, 23, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   .card-border {
-    border: 1px solid rgba(0, 255, 204, 0.12);
+    border: 1px solid #E6E4DF;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
   .card-border:hover {
-    border-color: rgba(0, 255, 204, 0.35);
-  }
-
-  .accent-line {
-    background: linear-gradient(90deg, #00ffcc, transparent);
+    border-color: #d0cdc7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 }

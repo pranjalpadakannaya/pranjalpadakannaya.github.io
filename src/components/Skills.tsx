@@ -2,24 +2,32 @@ import { motion } from 'framer-motion'
 
 const skillGroups = [
   {
-    category: 'Programming & Querying',
+    category: 'Languages',
     skills: ['Python', 'SQL'],
   },
   {
     category: 'Big Data & Cloud',
-    skills: ['Apache Spark', 'Databricks', 'AWS', 'Snowflake', 'Delta Lake', 'Kafka'],
+    skills: ['Apache Spark', 'PySpark', 'Databricks', 'AWS (S3, Lambda, Redshift)', 'Snowflake'],
   },
   {
     category: 'ETL & Orchestration',
     skills: ['Airflow', 'Matillion', 'dbt'],
   },
   {
-    category: 'DevOps & CI/CD',
-    skills: ['Docker', 'Terraform', 'Jenkins', 'GitHub Actions', 'Git'],
+    category: 'APIs & Frameworks',
+    skills: ['FastAPI', 'Flask', 'REST APIs'],
   },
   {
-    category: 'Governance & Integration',
-    skills: ['Collibra', 'REST APIs', 'GDPR Compliance'],
+    category: 'DevOps & CI/CD',
+    skills: ['Docker', 'Terraform', 'GitHub Actions', 'Jenkins', 'Git'],
+  },
+  {
+    category: 'Governance',
+    skills: ['Collibra', 'GDPR Compliance'],
+  },
+  {
+    category: 'Currently Exploring',
+    skills: ['Kafka', 'React / TypeScript', 'LLM Engineering'],
   },
   {
     category: 'Certifications',
@@ -29,7 +37,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-surface/30">
+    <section id="skills" className="py-24 px-6 bg-surface/50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,41 +46,38 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-mono text-xs text-accent tracking-widest mb-3">04 / SKILLS</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Tech Stack</h2>
+          <p className="font-mono text-xs text-accent tracking-widest mb-3 uppercase">Skills</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">Tech Stack</h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillGroups.map((group, gi) => (
-            <motion.div
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
+        >
+          {skillGroups.map(group => (
+            <div
               key={group.category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.5, delay: gi * 0.08 }}
-              className="bg-surface rounded-2xl p-5 card-border hover:shadow-glow transition-all duration-300"
+              className="bg-white rounded-2xl p-5 card-border"
             >
-              <h3 className="font-mono text-xs text-accent tracking-wider mb-4 uppercase">
+              <h3 className="font-mono text-xs text-text-secondary tracking-wider mb-4 uppercase">
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill, si) => (
-                  <motion.span
+                {group.skills.map(skill => (
+                  <span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: gi * 0.08 + si * 0.05 }}
-                    whileHover={{ scale: 1.05, color: '#00ffcc' }}
-                    className="font-mono text-xs px-3 py-1.5 rounded-lg bg-bg text-slate-300 border border-white/8 hover:border-accent/30 hover:text-accent transition-all cursor-default"
+                    className="font-mono text-xs px-3 py-1.5 rounded-lg bg-surface text-text-secondary border border-border hover:border-accent/30 hover:text-accent hover:bg-accent-soft transition-all cursor-default"
                   >
                     {skill}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -15,7 +15,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-surface/30">
+    <section id="contact" className="py-24 px-6 bg-surface/50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,15 +24,14 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-mono text-xs text-accent tracking-widest mb-3">06 / CONTACT</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Get In Touch</h2>
-          <p className="text-slate-400 mt-3 max-w-xl">
+          <p className="font-mono text-xs text-accent tracking-widest mb-3 uppercase">Contact</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">Get In Touch</h2>
+          <p className="text-text-secondary mt-3 max-w-xl">
             Open to data engineering roles, collaborations, and interesting data problems. Reach out anytime.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: -30 }}
@@ -43,76 +42,71 @@ export default function Contact() {
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <label className="font-mono text-xs text-slate-500 tracking-wider block mb-2">NAME</label>
+                <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Name</label>
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full bg-surface border border-white/8 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-accent/50 focus:shadow-glow transition-all duration-200 font-mono"
+                  className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200"
                 />
               </div>
               <div>
-                <label className="font-mono text-xs text-slate-500 tracking-wider block mb-2">EMAIL</label>
+                <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Email</label>
                 <input
                   type="email"
                   placeholder="you@example.com"
-                  className="w-full bg-surface border border-white/8 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-accent/50 focus:shadow-glow transition-all duration-200 font-mono"
+                  className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200"
                 />
               </div>
             </div>
             <div>
-              <label className="font-mono text-xs text-slate-500 tracking-wider block mb-2">MESSAGE</label>
+              <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Message</label>
               <textarea
                 rows={5}
                 placeholder="What's on your mind?"
-                className="w-full bg-surface border border-white/8 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:border-accent/50 focus:shadow-glow transition-all duration-200 resize-none font-mono"
+                className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200 resize-none"
               />
             </div>
             <motion.button
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-accent text-bg font-semibold py-3.5 rounded-xl hover:shadow-glow transition-all duration-200 font-mono text-sm tracking-wide"
+              className="w-full bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/90 transition-colors duration-200 font-mono text-sm tracking-wide"
             >
-              Send Message →
+              Send Message
             </motion.button>
           </motion.form>
 
-          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-4"
+            className="space-y-3"
           >
-            {contactLinks.map((item, i) => (
-              <motion.div
+            {contactLinks.map(item => (
+              <div
                 key={item.label}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.2 + i * 0.08 }}
-                className="flex items-center gap-4 p-4 bg-surface rounded-xl card-border group hover:shadow-glow transition-all duration-300"
+                className="flex items-center gap-4 p-4 bg-white rounded-xl card-border group"
               >
-                <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center flex-shrink-0">
                   <span className="text-accent font-mono text-xs">{item.label[0]}</span>
                 </div>
                 <div>
-                  <p className="font-mono text-xs text-slate-600 tracking-wider uppercase">{item.label}</p>
+                  <p className="font-mono text-xs text-text-secondary/60 tracking-wider uppercase">{item.label}</p>
                   {item.href ? (
                     <a
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-slate-300 text-sm hover:text-accent transition-colors group-hover:text-accent"
+                      className="text-text-primary text-sm hover:text-accent transition-colors"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-slate-300 text-sm">{item.value}</p>
+                    <p className="text-text-primary text-sm">{item.value}</p>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </div>

@@ -1,27 +1,28 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranjal Padakannaya — Data Engineer</title>
-    <link rel="canonical" href="https://pranjalpadakannaya.github.io/">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Data Engineer with 2 years of experience building scalable pipelines for Fortune 500 clients. AWS, Databricks, Spark, Snowflake." />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="images/avatar.jpg" />
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Pranjal Padakannaya">
-    <meta property="og:description" content="Data Engineer — pipelines on AWS/Databricks, Spark, Snowflake.">
-    <meta property="og:url" content="https://pranjalpadakannaya.github.io/">
-    <meta property="og:image" content="https://pranjalpadakannaya.github.io/images/avatar.jpg">
-    
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Pranjal Padakannaya">
-    <meta name="twitter:description" content="Data Engineer — pipelines on AWS/Databricks, Spark, Snowflake.">
-    <meta name="twitter:image" content="https://pranjalpadakannaya.github.io/images/avatar.jpg">
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://pranjalpadakannaya.github.io/" />
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Pranjal Padakannaya" />
+    <meta property="og:description" content="Data Engineer — pipelines on AWS/Databricks, Spark, Snowflake." />
+    <meta property="og:url" content="https://pranjalpadakannaya.github.io/" />
+    <meta property="og:image" content="https://pranjalpadakannaya.github.io/images/avatar.jpg" />
 
-    <!-- JSON-LD: Person schema -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pranjal Padakannaya" />
+    <meta name="twitter:description" content="Data Engineer — pipelines on AWS/Databricks, Spark, Snowflake." />
+    <meta name="twitter:image" content="https://pranjalpadakannaya.github.io/images/avatar.jpg" />
+
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,330 +41,17 @@
       "sameAs": [
         "https://www.linkedin.com/in/pranjal-padakannaya/",
         "https://github.com/pranjalpadakannaya"
-      ],
-      "alumniOf": [
-        {"@type":"CollegeOrUniversity","name":"Arizona State University"},
-        {"@type":"CollegeOrUniversity","name":"Dayananda Sagar University"}
-      ],
-      "knowsAbout": [
-        "Data Engineering","ETL","AWS","Databricks","Apache Spark","Snowflake","SQL","Python"
       ]
     }
     </script>
 
-    <!-- Minimal dark-mode overrides -->
-    <style>
-      :root { --bg:#ffffff; --fg:#1f2937; --card:rgba(0,0,0,0.06); --link:#2563eb; }
-      .theme-dark { --bg:#0b0f14; --fg:#e5e7eb; --card:rgba(255,255,255,0.08); --link:#93c5fd; }
-      body { background:var(--bg); color:var(--fg); }
-      a { color:var(--link); }
-      .work-item { border-radius:10px; box-shadow:0 1px 0 var(--card); }
-      .theme-toggle {
-        display:inline-flex; align-items:center; gap:.5rem; font-size:.9rem;
-        padding:.35rem .7rem; border-radius:999px; border:1px solid var(--card);
-        background:transparent; color:var(--fg); cursor:pointer;
-      }
-      /* simple project card tweak */
-      .project-card { padding:1rem; border-radius:10px; box-shadow:0 1px 0 var(--card); }
-      .project-meta { font-size:.9rem; opacity:.9; margin:.2rem 0 .6rem; }
-      .project-links a { margin-right:.75rem; }
-      #header .inner{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        text-align:center;
-      }
-      
-      /* Avatar container: a perfect, centered circle */
-      #header .inner a.image.avatar{
-        position: static !important;   /* kill template offsets */
-        left: auto !important;
-        transform: none !important;
-        float: none !important;
-      
-        display: block;
-        width: 190px;                  /* circle size */
-        height: 190px;
-        margin: 0 auto 1.25rem !important;
-        border-radius: 50%;
-        overflow: hidden;              /* crop inside the circle */
-        border: 3px solid rgba(255,255,255,0.25);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.1);
-      }
-      
-      /* Photo fills the circle without stretching */
-      #header .inner a.image.avatar img{
-        display:block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 0;
-      }
-
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   </head>
-  <body class="is-preload" id="top">
-
-    <!-- Header -->
-    <header id="header">
-      <div class="inner">
-        <a href="#top" class="image avatar"><img src="images/avatar.jpg" alt="Photo of Pranjal Padakannaya" /></a>
-        <h1>
-          <strong>Pranjal Padakannaya</strong><br />
-          Data Engineer • ETL Developer
-        </h1>
-        <p class="minor">
-          Tempe, AZ • <a href="tel:+14802776530">(+1) 480-277-6530</a> •
-          <a href="mailto:pranjalpadak@gmail.com">pranjalpadak@gmail.com</a>
-        </p>
-        <p class="minor">
-          <a href="https://www.linkedin.com/in/pranjal-padakannaya/" target="_blank" rel="noopener">LinkedIn</a> •
-          <a href="https://pranjalpadakannaya.github.io/" target="_blank" rel="noopener">Website</a> •
-          <a href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
-        </p>
-        <p>
-          <a class="button" href="Pranjal_Padakannaya_Resume.pdf" target="_blank" rel="noopener">⬇️ Download Resume</a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓 Dark Mode</button>
-        </p>
-      </div>
-    </header>
-
-    <!-- Main -->
-    <div id="main">
-
-      <!-- About -->
-      <section id="one">
-        <header class="major">
-          <h2>About</h2>
-        </header>
-        <p>
-          Data Engineer with 2 years of experience building scalable pipelines for Fortune 500 clients, improving processing efficiency.
-          Published researcher with funded projects, delivering high-impact data solutions. Skilled in Python, SQL, AWS, Databricks, Apache Spark, and Snowflake.
-        </p>
-        <ul class="actions">
-          <li><a href="#three" class="button">Contact</a></li>
-        </ul>
-      </section>
-
-      <!-- Highlights -->
-      <section id="two">
-        <h2>Key Highlights</h2>
-        <div class="row">
-          <article class="col-6 col-12-xsmall work-item">
-            <a class="image fit thumb"><img src="images/accounthierarchy.jpg" alt="Hierarchy" /></a>
-            <h3>Account Hierarchy — First in Europe</h3>
-            <p>Led Europe’s first implementation of customer account hierarchy for Merck, enabling account potential initiatives.</p>
-          </article>
-
-          <article class="col-6 col-12-xsmall work-item">
-            <a class="image fit thumb"><img src="images/insights.jpg" alt="C-level insights" /></a>
-            <h3>Executive Insights Impact</h3>
-            <p>Drove <strong>$200M</strong> in value by integrating insights into C-level dashboards across European markets.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Projects (NEW) -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="row">
-          <!-- Project 1 -->
-          <div class="col-6 col-12-small">
-            <div class="project-card">
-              <h3>End to End Supply Chain Processing using Cockroach DB (In-Progress)</h3>
-              <p class="project-meta">CockroachDB • AWS • Kafka • dbt</p>
-              <!-- <p></p> -->
-              <p class="project-links">
-                <a class="button small" href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
-                <a class="button small" href="#" target="_blank" rel="noopener">Live Demo</a>
-              </p>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="col-6 col-12-small">
-            <div class="project-card">
-              <h3>Secret Project Coming Soon</h3>
-              <p class="project-meta">Kafka • Spark Structured Streaming • Databricks</p>
-              <!-- <p></p> -->
-              <p class="project-links">
-                <a class="button small" href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">GitHub</a>
-                <a class="button small" href="#" target="_blank" rel="noopener">Tech Notes</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Tip: add more project cards above as you publish repos -->
-      </section>
-
-      <!-- Experience -->
-      <section id="experience">
-        <h2>Work Experience</h2>
-
-        <h3>Lead AI Prompt Engineer — Apex CoVantage</h3>
-        <p class="minor">Jun 2025 – Aug 2025 · Remote</p>
-        <ul>
-          <li>Led and trained <strong>40+</strong> prompt engineers, ensuring 100% deadline adherence over 3 months</li>
-          <li>Revamped <strong>8,000+</strong> rubrics, elevating AI model performance for a leading AI research lab</li>
-        </ul>
-
-        <h3>Data Engineer — The Math Company (MathCo)</h3>
-        <p class="minor">Jan 2024 – Jun 2025 · Bangalore, India</p>
-        <ul>
-          <li>Built commercial data solutions for Merck, including multi-market KPI dashboards, achieving a <strong>40% reduction</strong> in processing time</li>
-          <li>Implemented a first-ever recursive query solution for account hierarchy in Europe, enabling future projects in sales and Veeva activity distribution</li>
-          <li>Coordinated migrations with regional heads across diverse markets, directly delivering <strong>$200M</strong> in business value through improved transparency</li>
-          <li>Implemented rule-based validation checks, reducing downstream reporting errors by <strong>25%</strong></li>
-          <li>Ensured <strong>100% GDPR compliance</strong> for oncology market data across five European regions</li>
-        </ul>
-
-        <h3>Intern — Infosys</h3>
-        <p class="minor">Feb 2022 – May 2022 · Bangalore, India</p>
-        <ul>
-          <li>Optimized page load speeds via template redirection, improving web app efficiency (up to <strong>60%</strong> faster)</li>
-          <li>Developed Python and SQL scripts to convert messy data to clean, standardized datasets</li>
-        </ul>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="row">
-          <div class="col-6 col-12-xsmall">
-            <h4>Programming &amp; Querying</h4>
-            <p>Python, SQL</p>
-            <h4>Big Data &amp; Cloud</h4>
-            <p>Apache Spark, Databricks, AWS, Snowflake</p>
-            <h4>ETL &amp; Orchestration</h4>
-            <p>Airflow, Matillion</p>
-          </div>
-          <div class="col-6 col-12-xsmall">
-            <h4>DevOps &amp; CI/CD</h4>
-            <p>Docker, Terraform, Jenkins, GitHub Actions, Git</p>
-            <h4>Governance &amp; Integration</h4>
-            <p>Collibra, REST APIs</p>
-            <h4>Certifications</h4>
-            <p>Databricks Certified Data Analyst Associate (Mar 2025 – Mar 2027)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education & Awards -->
-      <section id="edu">
-        <h2>Education &amp; Awards</h2>
-
-        <h3>Arizona State University</h3>
-        <p class="minor">M.S. in Computer Science (Big Data Systems) — Aug 2025 – May 2027 · Tempe, AZ</p>
-
-        <h3>Dayananda Sagar University</h3>
-        <p class="minor">B.S. in Computer Science — Aug 2019 – May 2023</p>
-
-        <h4>Awards &amp; Recognitions</h4>
-        <ul class="alt">
-          <li>Impact Performer — MSD (Merck) · Jun 2025</li>
-          <li>Appreciation Award — MathCo · Oct 2024</li>
-        </ul>
-
-        <h4>Publication</h4>
-        <p>
-          Building Accessible Video Games for Children with an Autism Spectrum Disorder —
-          <a href="https://ieeexplore.ieee.org/document/10179616" target="_blank" rel="noopener">IEEE Xplore</a>
-        </p>
-      </section>
-
-      <!-- Contact -->
-      <section id="three">
-        <h2>Get In Touch</h2>
-        <p>Open to data engineering roles, collaborations, and interesting data problems. Reach out anytime.</p>
-        <div class="row">
-          <div class="col-8 col-12-small">
-            <form onsubmit="window.location='mailto:pranjalpadak@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Pranjal,'; return false;">
-              <div class="row gtr-uniform gtr-50">
-                <div class="col-6 col-12-xsmall"><input type="text" placeholder="Your Name" /></div>
-                <div class="col-6 col-12-xsmall"><input type="email" placeholder="Your Email" /></div>
-                <div class="col-12"><textarea placeholder="Message" rows="4"></textarea></div>
-              </div>
-              <ul class="actions">
-                <li><input type="submit" value="Send Email" /></li>
-              </ul>
-            </form>
-          </div>
-          <div class="col-4 col-12-small">
-            <ul class="labeled-icons">
-              <li>
-                <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                Tempe, AZ 85281<br />United States
-              </li>
-              <li>
-                <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                <a href="tel:+14802776530">(+1) 480-277-6530</a>
-              </li>
-              <li>
-                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                <a href="mailto:pranjalpadak@gmail.com">pranjalpadak@gmail.com</a>
-              </li>
-              <li>
-                <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-                <a href="https://www.linkedin.com/in/pranjal-padakannaya/" target="_blank" rel="noopener">linkedin.com/in/pranjal-padakannaya</a>
-              </li>
-              <li>
-                <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
-                <a href="https://github.com/pranjalpadakannaya" target="_blank" rel="noopener">github.com/pranjalpadakannaya</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li><a href="https://github.com/pranjalpadakannaya" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
-          <li><a href="https://www.linkedin.com/in/pranjal-padakannaya/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-          <li><a href="mailto:pranjalpadak@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; <span id="yr"></span> Pranjal Padakannaya</li><li>Design: <a href="http://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
-        </ul>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      // Persisted dark mode with system preference
-      (function () {
-        const body = document.body;
-        const btn = document.getElementById('theme-toggle');
-        const apply = (mode) => {
-          body.classList.toggle('theme-dark', mode === 'dark');
-          localStorage.setItem('theme', mode);
-          btn.textContent = mode === 'dark' ? '🌞 Light Mode' : '🌓 Dark Mode';
-        };
-        const saved = localStorage.getItem('theme');
-        apply(saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-        btn.addEventListener('click', () => apply(body.classList.contains('theme-dark') ? 'light' : 'dark'));
-      })();
-      // auto-year in footer
-      document.getElementById('yr').textContent = new Date().getFullYear();
-    </script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-

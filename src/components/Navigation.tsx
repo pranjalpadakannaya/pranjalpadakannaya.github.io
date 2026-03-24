@@ -51,20 +51,18 @@ export default function Navigation() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg/80 backdrop-blur-md border-b border-accent/10 shadow-lg shadow-black/20'
+          ? 'bg-white/80 backdrop-blur-md border-b border-border shadow-sm'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-mono text-accent text-sm font-medium tracking-widest hover:glow-text transition-all"
+          className="font-mono text-accent text-sm font-medium tracking-widest hover:opacity-70 transition-opacity"
         >
-          PP<span className="text-white/40">_</span>
+          PP
         </button>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map(link => (
             <button
@@ -72,8 +70,8 @@ export default function Navigation() {
               onClick={() => scrollTo(link.href)}
               className={`font-mono text-xs tracking-widest uppercase transition-all duration-200 ${
                 active === link.href.slice(1)
-                  ? 'text-accent glow-text'
-                  : 'text-slate-400 hover:text-accent'
+                  ? 'text-accent font-medium'
+                  : 'text-text-secondary hover:text-text-primary'
               }`}
             >
               {link.label}
@@ -81,33 +79,31 @@ export default function Navigation() {
           ))}
         </div>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(m => !m)}
           className="md:hidden flex flex-col gap-1.5 p-1"
           aria-label="Toggle menu"
         >
-          <span className={`block w-5 h-0.5 bg-accent transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-accent transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-accent transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-5 h-0.5 bg-text-primary transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-5 h-0.5 bg-text-primary transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-5 h-0.5 bg-text-primary transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg/95 backdrop-blur-md border-b border-accent/10"
+            className="md:hidden bg-white/95 backdrop-blur-md border-b border-border"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {links.map(link => (
                 <button
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
-                  className="font-mono text-xs tracking-widest uppercase text-slate-400 hover:text-accent text-left transition-colors"
+                  className="font-mono text-xs tracking-widest uppercase text-text-secondary hover:text-accent text-left transition-colors"
                 >
                   {link.label}
                 </button>

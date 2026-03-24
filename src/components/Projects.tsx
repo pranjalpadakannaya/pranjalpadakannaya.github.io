@@ -2,24 +2,31 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'End-to-End Supply Chain Processing',
-    status: 'In Progress',
+    title: 'Heirloom',
     description:
-      'Distributed supply chain data pipeline with real-time event streaming, HTAP storage, and transformation layers for analytics at scale.',
-    tech: ['CockroachDB', 'AWS', 'Kafka', 'dbt', 'Python'],
-    github: 'https://github.com/pranjalpadakannaya',
+      'A platform for preserving family knowledge. Records and transcribes conversations with elders locally via Whisper, then extracts structured artifacts like recipe cards and craft guides, with a constellation graph for family relationships.',
+    tech: ['React', 'TypeScript', 'Claude API', 'Whisper', 'IndexedDB'],
+    github: 'https://github.com/akashbagchi/heirloom',
     demo: null,
-    accent: '#00ffcc',
+    note: null,
   },
   {
-    title: 'Secret Project',
-    status: 'Coming Soon',
+    title: 'unbored.AI',
     description:
-      'Real-time streaming data platform leveraging structured streaming for sub-second latency processing on cloud-native infrastructure.',
-    tech: ['Kafka', 'Spark Structured Streaming', 'Databricks', 'Delta Lake'],
-    github: 'https://github.com/pranjalpadakannaya',
+      'Scans a GitHub repo, maps its dependency graph, and auto-generates onboarding docs with an architecture overview. Built at HackASU 2025.',
+    tech: ['Python', 'Claude API', 'NetworkX', 'Docusaurus', 'React Flow'],
+    github: 'https://github.com/akashbagchi/unbored.ai',
     demo: null,
-    accent: '#7c3aed',
+    note: 'Co-author of the underlying unbored Python package',
+  },
+  {
+    title: 'Socratic AI',
+    description:
+      'An AI tutor that guides students through problems with questions instead of answers. Teachers get a dashboard to track concept gaps across the class.',
+    tech: ['Supabase', 'Google AI API', 'Vite', 'Node.js'],
+    github: 'https://github.com/akashbagchi/socratic-ai',
+    demo: null,
+    note: null,
   },
 ]
 
@@ -34,64 +41,48 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-mono text-xs text-accent tracking-widest mb-3">03 / PROJECTS</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Things I'm Building</h2>
+          <p className="font-mono text-xs text-accent tracking-widest mb-3 uppercase">Projects</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">Things I've Built</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {projects.map((proj, i) => (
             <motion.div
               key={proj.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
-              className="group relative bg-surface rounded-2xl p-6 card-border transition-all duration-300 hover:shadow-glow flex flex-col"
+              className="group bg-white rounded-2xl p-6 card-border flex flex-col"
             >
-              {/* Top accent line */}
-              <div
-                className="absolute top-0 left-6 right-6 h-px opacity-60 group-hover:opacity-100 transition-opacity"
-                style={{
-                  background: `linear-gradient(90deg, ${proj.accent}, transparent)`,
-                }}
-              />
-
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors leading-tight pr-4">
+              <div className="mb-4">
+                <h3 className="text-base font-semibold text-text-primary group-hover:text-accent transition-colors mb-2">
                   {proj.title}
                 </h3>
-                <span
-                  className="font-mono text-xs px-2.5 py-1 rounded-full border flex-shrink-0"
-                  style={{
-                    color: proj.accent,
-                    borderColor: `${proj.accent}40`,
-                    background: `${proj.accent}10`,
-                  }}
-                >
-                  {proj.status}
-                </span>
+                <p className="text-text-secondary text-sm leading-relaxed">{proj.description}</p>
+                {proj.note && (
+                  <p className="font-mono text-xs text-accent/70 mt-2 italic">{proj.note}</p>
+                )}
               </div>
 
-              <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">{proj.description}</p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 mb-5 mt-auto pt-4">
                 {proj.tech.map(t => (
                   <span
                     key={t}
-                    className="font-mono text-xs px-2.5 py-1 rounded-md bg-white/4 text-slate-400 border border-white/8"
+                    className="font-mono text-xs px-2 py-1 rounded bg-accent-soft text-accent border border-accent/15"
                   >
                     {t}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 border-t border-border pt-4">
                 <a
                   href={proj.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-xs text-slate-500 hover:text-accent transition-colors"
+                  className="font-mono text-xs text-text-secondary hover:text-accent transition-colors"
                 >
                   GitHub ↗
                 </a>
@@ -100,7 +91,7 @@ export default function Projects() {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-xs text-slate-500 hover:text-accent transition-colors"
+                    className="font-mono text-xs text-text-secondary hover:text-accent transition-colors"
                   >
                     Live Demo ↗
                   </a>

@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgopwllv'
 
 const contactLinks = [
   { label: 'Email', value: 'pranjalpadak@gmail.com', href: 'mailto:pranjalpadak@gmail.com' },
@@ -9,9 +12,28 @@ const contactLinks = [
 ]
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    window.location.href = 'mailto:pranjalpadak@gmail.com?subject=Portfolio%20Inquiry'
+    setStatus('sending')
+    const form = e.currentTarget
+    const data = new FormData(form)
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -45,6 +67,8 @@ export default function Contact() {
                 <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Name</label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder="Your name"
                   className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200"
                 />
@@ -53,6 +77,8 @@ export default function Contact() {
                 <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Email</label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder="you@example.com"
                   className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200"
                 />
@@ -62,17 +88,26 @@ export default function Contact() {
               <label className="font-mono text-xs text-text-secondary tracking-wider block mb-2 uppercase">Message</label>
               <textarea
                 rows={5}
+                name="message"
+                required
                 placeholder="What's on your mind?"
                 className="w-full bg-white border border-border rounded-xl px-4 py-3 text-sm text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent/60 transition-colors duration-200 resize-none"
               />
             </div>
+            {status === 'success' && (
+              <p className="font-mono text-xs text-green-600 tracking-wide">Message sent! I'll get back to you soon.</p>
+            )}
+            {status === 'error' && (
+              <p className="font-mono text-xs text-red-500 tracking-wide">Something went wrong. Please try again or email me directly.</p>
+            )}
             <motion.button
               type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/90 transition-colors duration-200 font-mono text-sm tracking-wide"
+              disabled={status === 'sending'}
+              whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
+              whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
+              className="w-full bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/90 transition-colors duration-200 font-mono text-sm tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
             </motion.button>
           </motion.form>
 
